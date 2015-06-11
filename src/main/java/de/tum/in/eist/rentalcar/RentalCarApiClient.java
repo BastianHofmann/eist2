@@ -73,6 +73,9 @@ public class RentalCarApiClient {
      *  Hint - Make toRentalCarTrip(JsonObject response) to validate and
      *         return data in RentalCarTrip POJO
      */
+  	URL url = new URL("http://localhost:8080/rentalCarApi/getRentalCar/" + carClass + "/" + origin.getLatitude() + "/" + origin.getLongitude() + "/" + destination.getLatitude() + "/" + destination.getLongitude());
+  	HTTPResponse response = service.fetch(url);
+  	
     return null;
   }
 
